@@ -2,7 +2,7 @@ version: '2'
 
 services:
   spring-reactor-redis:
-    image: sooabia/spring-reactor-redis:9
+    image: sooabia/spring-reactor-redis:latest
     hostname: spring-reactor-redis 
     restart: always
     ports:
