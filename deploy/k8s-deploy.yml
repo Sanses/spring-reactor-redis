@@ -21,6 +21,25 @@ spec:
         image: redis:4.0.8-alpine
         ports: 
         - containerPort: 6379
+---
+kind: Deployment 
+metadata: 
+  name: spring-redis 
+spec: 
+  selector: 
+    matchLabels: 
+      app: redis 
+  replicas: 1
+  template:
+    metadata: 
+      labels: 
+        app: spring 
+    spec: 
+      containers: 
+      - name: redis 
+        image: redis:4.0.8-alpine
+        ports: 
+        - containerPort: 6379
 ---  
 kind: Service 
 apiVersion: v1 
