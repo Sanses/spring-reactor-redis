@@ -16,12 +16,9 @@ spec:
       - name: spring
         image: sooabia/spring-reactor-redis:#{Build.BuildId}#
         ports: 
-        - containerPort: 8080 
-      - name: redis 
-        image: redis:4.0.8-alpine
-        ports: 
-        - containerPort: 6379
+        - containerPort: 8080
 ---
+apiVersion: apps/v1
 kind: Deployment 
 metadata: 
   name: spring-redis 
