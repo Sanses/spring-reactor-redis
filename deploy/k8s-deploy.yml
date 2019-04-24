@@ -23,6 +23,9 @@ kind: Deployment
 metadata: 
   name: spring-redis 
 spec: 
+  selector: 
+    matchLabels: 
+      app: redis 
   replicas: 1
   template:
     metadata: 
