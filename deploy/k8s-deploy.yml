@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: spring
-        image: sooabia/spring-reactor-redis:latest
+        image: sooabia/spring-reactor-redis:#{Build.BuildId}#
         ports: 
         - containerPort: 8080 
       - name: redis 
