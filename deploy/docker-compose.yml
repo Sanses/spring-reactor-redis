@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  spring-reactor-redis:
+    image: sooabia/spring-reactor-redis:9
+    hostname: spring-reactor-redis 
+    restart: always
+    ports:
+     - '80:8080'
+
+  redis:
+    image: redis:4.0.8-alpine 
+    ports:
+      - "6379:6379"
+    volumes:
+      - /redis:/data/redis
+    restart: always
+    networks: 
+      - backend
+
+networks: 
+  backend:
+    driver: bridge
