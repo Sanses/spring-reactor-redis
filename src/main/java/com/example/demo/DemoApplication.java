@@ -11,7 +11,7 @@ public class DemoApplication {
 
     @RequestMapping("/")
     public String hello(){
-        return "Hello Spring reactor docker! v2";
+        return "Hello Spring reactor docker! v5";
     }
     
 	public static void main(String[] args) {
